@@ -6,9 +6,7 @@
 
    많은 언어 중에서 python이 크롤링에 많이 쓰여지고 있는 언어이다.
 
-2.  **패키지**
-
-   1. **`requests`**, **`BeautifulSoup(bs4)`**
+2.  **패키지** -> **`requests`**, **`BeautifulSoup(bs4)`**
 
       * url의 정보를 가져오고 가공하는데 쓰이는 패키지이다.
 
