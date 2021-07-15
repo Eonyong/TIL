@@ -6,9 +6,7 @@
 
    많은 언어 중에서 python이 크롤링에 많이 쓰여지고 있는 언어이다.
 
-2.  **패키지**
-
-   1. **`requests`**, **`BeautifulSoup(bs4)`**
+2.  **패키지** -> **`requests`**, **`BeautifulSoup(bs4)`**
 
       * url의 정보를 가져오고 가공하는데 쓰이는 패키지이다.
 
@@ -24,9 +22,7 @@
 
         1. `requests.get(url).test`를 사용하여 가져온 데이터를 text화
 
-        2. `BeautifulSoup(url, 'html.parser')`코드를 이용하여 
-
-           soup 객체로 변환
+        2. `BeautifulSoup(url, 'html.parser')`코드를 이용하여 soup 객체로 변환
 
         3. `parser.select_one(html 요소)`를 이용하여 원하는 html 요소를 하나만 찾아냄
 
