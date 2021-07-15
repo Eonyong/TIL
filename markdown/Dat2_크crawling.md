@@ -22,9 +22,7 @@
 
         1. `requests.get(url).test`를 사용하여 가져온 데이터를 text화
 
-        2. `BeautifulSoup(url, 'html.parser')`코드를 이용하여 
-
-           soup 객체로 변환
+        2. `BeautifulSoup(url, 'html.parser')`코드를 이용하여 soup 객체로 변환
 
         3. `parser.select_one(html 요소)`를 이용하여 원하는 html 요소를 하나만 찾아냄
 
