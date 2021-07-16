@@ -4,11 +4,11 @@ updates = 0
 
 while True:
     # 기본 설정
-    token = '1864791201:AAF6B9qZV5FI1k_Hcf7BEUlAiwBMoaf988g' # 자신의 토큰
+    token = '####' # 자신의 토큰
     url = f'https://api.telegram.org/bot{token}'
 
     naver_client_id = 'THoAkGM1tIsvcF9l_AZ7' #자신의 네이버 클라이언트 id
-    naver_client_secret = 'XlYIk_0wJB' ##자신의 네이버 클라이언트 secret
+    naver_client_secret = '####' ##자신의 네이버 클라이언트 secret
     naver_url = 'https://openapi.naver.com/v1/search/shop.json?query='
 
     headers = {
