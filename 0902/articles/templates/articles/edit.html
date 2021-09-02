@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>EDIT</h1>
+  <form action={% url 'articles:update' article.pk %} method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE:</label>
+    <input type="text" id="title" name="title" value="{{ article.title }}"><br>
+    <label for="content">CONTENT:</label>
+    <textarea name="content" id="content" cols="20" rows="5">{{ article.content }}</textarea>
+    <input type="submit" value="작성">
+  </form>
+  <a href="{% url 'articles:index' %}">[메인 페이지로 이동]</a>
+{% endblock content %}
