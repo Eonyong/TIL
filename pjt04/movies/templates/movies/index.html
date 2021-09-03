@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Main Page{% endblock title %}
+{% block content %}
+  <div class="container">
+    <h1 class="text-center">Movies</h1>
+    <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>Overview</th>
+          <th>Poster</th>
+        </tr>
+      {% for movie in movies %}
+        <tr>
+          <td><a href="{% url 'movies:detail' movie.pk %}" style="text-decoration:none">{{ movie.title }}</a></td>
+          <td>{{ movie.overview }}</td>
+          <td><img src="{{ movie.poster_path }}" alt="{{ movie.title }}" width="200"></td>
+        </tr>
+      {% endfor %}
+    </table>
+    <a href="{% url 'movies:new' %}" style="text-decoration:none">영화 추가하기</a>
+  </div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}create{% endblock title %}
+{% block content %}
+  <h1 class="text-center">Create!!</h1>
+  <a href="{% url 'movies:index' %}">
+    <button>
+    메인으로 가기
+    </button>
+  </a>
+{% endblock content %}
