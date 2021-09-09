@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+<h2 class='fw-bold'>CREATE</h2>
+<form action="{%url 'articles:create' %}"method = 'POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="제출">
+</form>
+<a href="{%url 'articles:index'%}" class='text-decoration-none'>[BACK]</a>
+{% endblock content %}

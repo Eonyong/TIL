@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+{% block content %}
+  <h1>Articles</h1>
+  <img src="{% static 'articles/choon.jpeg' %}" alt="{{ article.image }}"><br>
+  <a href="{% url 'articles:create' %}" class="text-decoration-none">[CREATE]</a>
+  <hr>
+  {% for article in articles %}
+    <P>글 번호: {{ article.pk }}</P>
+    <P>글 제목: {{ article.title }}</P>
+    <P>글 내용: {{ article.content }}</P>
+    <a href="{% url 'articles:detail' article.pk %}" class="text-decoration-none">[DETAIL]</a>
+    <hr>
+  {% endfor %}
+
+{% endblock content %}

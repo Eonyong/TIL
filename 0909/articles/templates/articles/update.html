@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+    <h2 class='fw-bold'>Edit</h2>
+    <form action="{%url 'articles:update' article.pk%}" method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" value="OK">
+        <a href="{%url 'articles:detail' article.pk %}" class='text-decoration-none'><input type="button" value="Cancel"></a>
+    </form>
+    <hr>
+    <a href="{%url 'articles:index' %}" class='text-decoration-none'><input type="button" value="Back"></a>
+{% endblock content %}

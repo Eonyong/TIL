@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p>제목: {{article.title}}</p>
+    <p>내용: {{article.content}}</p>
+    {% if article.image_thumb %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}"><br>
+    {% endif %}
+    <p>작성 시각: {{article.created_at|date:'Y년 M j일 h:i A'}}</p>
+    <p>수정 시각: {{article.updated_at|date:'Y년 M j일 h:i A'}}</p>
+        <hr>
+    <a href="{%url 'articles:update' article.pk%}" class='text-decoration-none'><button class="bnt-primary">UPDATE</button></a> <br>
+    <a href="{%url 'articles:delete' article.pk%}" class='text-decoration-none'><button class="bnt-primary">DELETE</button></a> <br>
+    <a href="{%url 'articles:index' %}" class='text-decoration-none'>돌아가기</a>
+
+{% endblock content %}
