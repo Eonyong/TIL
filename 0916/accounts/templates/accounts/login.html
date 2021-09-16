@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+{% comment %} action이 "" 상탤호 있어야 request.GET.get("next")가 작동합니다 {% endcomment %}
+  <form action="" method="POST"> 
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons submit="로그인" reset="Cancel" %}{% endbuttons %}
+  </form>
+{% endblock content %}
