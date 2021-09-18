@@ -2,8 +2,6 @@
 {% load bootstrap5 %}
 
 {% block content %}
-{% comment %} 요청이 signup > signup {% endcomment %}
-{% comment %} 요청이 login > login {% endcomment %}
   {% if request.resolver_match.url_name == 'signup' %}
     <h1>SIGN UP</h1>
   {% elif request.resolver_match.url_name == 'login' %}
